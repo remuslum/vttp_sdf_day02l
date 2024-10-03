@@ -68,4 +68,20 @@ public class Laptop extends Computer{
         System.out.println(this.getWeight());
     }
 
+    public int computeArithmetic() {
+        int a = 1;
+        int b = 2;
+        int sum;
+
+        sum = a + b;
+        return sum;
+    }
+
+    public int computeArithmetic(int a, int b) {
+        int sum;
+
+        sum = a + b;
+        return sum;
+    }
+
 }
