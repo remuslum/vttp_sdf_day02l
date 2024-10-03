@@ -73,4 +73,18 @@ public class App {
             System.out.println("This is a vehicle");
         }
     }
+
+    //compile
+    // javac --source-path . ./*.java object/*.java vehicle/*.java 
+    // note the dot after path
+
+    //run
+    // java -cp target App
+
+    //JAR file (in target folder)
+    // jar -c -v -f sdf02l.jar -e App
+
+    //run package
+    // java -jar sdf02l.jar
+    
 }
