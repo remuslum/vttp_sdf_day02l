@@ -4,6 +4,9 @@ import java.util.List;
 import object.Computer;
 import object.Desktop;
 import object.Laptop;
+import vehicle.Car;
+import vehicle.Truck;
+import vehicle.Vehicle;
 
 public class App {
     public static void main(String[] args) {
@@ -49,6 +52,25 @@ public class App {
         // For statement to display machines
         for (Computer machine : machines) {
             machine.displaySpec();
+        }
+
+        List<Vehicle> vehicles = new ArrayList<>();
+        vehicles.add(new Vehicle("1 Series","BMW",2013));
+        vehicles.add(new Car("sedan",5,"100", "Audi", 1994));
+        vehicles.add(new Truck(300.78, "Chavdar", "Toyota", 2005));
+        
+        for (Vehicle v:vehicles) {
+            whatIsMyType(v);
+        }
+    }
+
+    public static void whatIsMyType(Object obj) {
+        if (obj instanceof Car) {
+            System.out.println("This is a car");
+        } else if (obj instanceof Truck) {
+            System.out.println("This is a truck");
+        } else {
+            System.out.println("This is a vehicle");
         }
     }
 }
